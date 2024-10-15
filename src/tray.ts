@@ -115,7 +115,9 @@ export function create(config: IConfig): void {
             }
         }
 
-        trayIcon?.setImage(newFavicon);
+        if (!isMonochrome()) {
+            trayIcon?.setImage(newFavicon);
+        }
         global.mainWindow?.setIcon(newFavicon);
     });
 
