@@ -29,7 +29,7 @@ export function destroy(): void {
 }
 
 export function isMonochrome(): boolean {
-    return global.store.get("monochromeIcon", process.platform === "linux");
+    return global.store.get("monochromeIcon", false);
 }
 
 export function refreshIcon(): void {
